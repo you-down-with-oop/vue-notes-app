@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div class="toolbar">
-      <button class="toolbar-button">New</button>
-      <button class="toolbar-button">Delete</button>
-      <input class="toolbar-search" type="text" placeholder="Search..." />
-    </div>
+    <toolbar />
     <div class="note-container">
       <div class="note-selectors">
         <div class="note-selector active">
@@ -34,8 +30,13 @@
 </template>
 
 <script>
+import Toolbar from "./components/Toolbar";
+
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    Toolbar
+  }
 };
 </script>
 
