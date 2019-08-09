@@ -4,6 +4,7 @@
       v-for="note in notes"
       v-bind:note="note"
       v-bind:selectedNoteId="selectedNoteId"
+      v-on:selectNote="selectNote"
       v-bind:key="note.id"
     />
   </div>
@@ -27,6 +28,11 @@ export default {
       ],
       selectedNoteId: 1
     };
+  },
+  methods: {
+    selectNote: function(note) {
+      this.selectedNoteId = note.id;
+    }
   }
 };
 </script>
